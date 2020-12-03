@@ -1,0 +1,438 @@
+
+
+/********************************************/
+/*********FEUILLE DE STYLE - GENERAL*********/
+/********************************************/
+
+
+/************Loading Spinner*************/
+/*Test Loading spinner*/
+
+/*#blocpage :not(.chargement)
+{ 
+    display: none;
+}
+.chargement
+{ 
+    border-right :10px solid #FF79DA;  
+    border-top : 10px solid #FF79DA;
+    border-bottom : 10px solid #9356DC;
+    border-left : 10px solid #9356DC;
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    -webkit-animation :spin 3s linear infinite;
+    -o-animation: spin 3s linear infinite ;
+    animation: spin 3s linear infinite ;
+
+    margin: auto;
+    position: absolute;
+    top:0;left:0; right:0;bottom:0;
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+        transform : rotate(0deg);
+
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform : rotate(0deg);
+
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}*/
+/************Fin Loading Spinner*************/
+
+/****Page****/
+body
+{
+	background:white;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+}
+
+/****En-Tête Page***/
+.logo 
+{
+    Display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.bloc0
+{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    justify-content: center;
+    align-items: center; 
+}
+.bloc0 p
+{
+    font-weight: bold;
+}
+
+.fa-map-marker-alt
+{
+    margin-right: 20px;
+}
+
+.bloc1
+{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: rgb(248, 246, 246) ;   
+
+}
+
+.bloc1 > * /*.h1 .p .a*/
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:  x-large;
+}
+
+.explorer
+{
+    border-style: none;
+    border-radius: 30px;
+    background-color: #FF79DA;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #FF79DA,#9356DC);
+    color: white;
+    font-size: medium;
+}
+
+/****Bloc2****/
+.bloc2
+{
+    margin-bottom: 20px;    
+}
+
+.bloc2 h1
+{
+    text-align: center;
+}
+
+.menu 
+{
+    width:320px;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.choix 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-ro: repeat(auto-fill, minmax(320px, 1fr));*/
+    grid-gap: 100px;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 1em auto;
+    padding: 0;
+    max-width: auto;
+    grid-auto-flow: row;
+}
+
+.choix 
+{ 
+    counter-reset: item;
+    list-style-type: none;
+}
+  
+.choix li 
+{
+    margin:20px 0; 
+    width: 300px;
+}
+
+  
+.choix li a 
+{
+    display: block;
+    margin: 15px 0;
+    box-shadow: 0px 0 5px 1px #e0e0e0;
+    border-radius:15px;
+    background-color:#f6f6f6;
+    padding:10px;
+    margin-left:20px;
+    line-height: 40px;
+    color:#000;
+    text-decoration:none;
+    font-size:16px;
+    font-weight: bold;
+}
+  
+.choix li a:before 
+{ 
+    display: inline-block;
+    content: counter(item) "  "; 
+    counter-increment: item;
+    margin: 0 15px 0 -21px;
+    background-color:#9966cc;
+    border-radius:50%;
+    width:20px;
+    height:20px;  
+    text-align:center;
+    color:#fff;
+    line-height: 20px;
+    font-size: 12px;
+}
+  
+.choix li a .fas 
+{
+    margin-right:10px;
+    font-size:15px;
+    color:#808080;
+}
+  
+.choix li a:hover 
+{
+    background-color:#f5edff;
+}
+  
+.choix li a:hover .fas
+{
+    color:#9966cc;
+}
+  
+
+
+
+
+/*.menu
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bouton_menu
+{
+    line-height:80px;
+    display: inline-block;
+    background : #f1eeee;
+    position: relative;
+    padding: 0 10px 0 0;
+    border-radius: 25px ; 
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 7px 7px  #F2F2F2;
+    height: 80px;
+    text-size-adjust: auto;
+}
+
+.bouton_menu:hover
+{
+    background: rgb(255, 216, 222);
+}
+
+.menu a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.menu i
+{
+    color: grey;
+    position: relative;
+    right: 40px;
+}
+
+.pastille
+{
+    background-color: #9356DC;
+    position: relative;
+    right: 55px;
+    color: white;
+    padding:10px 20px 10px 10px;
+    border-radius: 80px;
+}*/
+
+
+/****Bloc3****/
+
+.bloc3
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(248, 246, 246); 
+    margin-bottom: 0;
+}
+
+.bloc3 h1
+{ 
+    margin-top: 0;
+    text-align: center;
+    font-size:  xx-large;
+}
+
+.restaurants
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.image
+{    
+    border-radius: 20px 20px 0 0;
+    object-fit: cover; 
+}
+
+.titi
+{
+   position: relative;
+}
+
+.tutu
+{
+    z-index: 1;
+}
+
+.new
+{
+    background-color: #99E2D0;
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    margin-left: 250px;
+    width: 80px;
+    text-align: center;
+    line-height: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: teal;
+    border-radius: 2px;
+}
+
+.description
+{
+    display: flex;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    margin-top: -3px;
+}
+
+.titres
+{
+    width: 85%;
+    /*background-color: burlywood;*/
+    padding-left: 10px;
+}
+
+.titre_image
+{
+    /*background-color: purple;*/
+    font-weight: 900;
+    font-size: large;
+    margin-bottom: 0;
+}
+
+.soustitre_image
+{
+    margin-top: 5px;
+    /*background-color: green;*/
+}
+
+.coeur
+{
+    /*color: ;*/
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    height: max-content;
+}
+
+
+.coeur :hover
+{ 
+    
+   /*color:  linear-gradient(to right, #FF79DA,#9356DC);*/
+    /*font-size: 72px;*/
+    background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+    /*background: -webkit-gradient(linear,to right, #FF79DA,#9356DC);*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*display: initial; /* reset Font Awesome's display:inline-block */
+    transform: scale(1.1);
+    transition: all 450ms; 
+    padding-top: 2px;
+    padding-bottom: 2px;
+  
+}
+
+
+
+/****Footer****/
+
+footer
+{
+    background-color: rgb(51, 50, 50);
+    color: white;
+    height: 200px;
+}
+
+.liens li
+{
+    list-style: none;
+    text-decoration: none;
+    margin-left:-10px;
+    margin-bottom: 10px;   
+}
+
+.liens li i
+{
+    margin-right: 12px;
+}
+
+
+.liens li a
+{
+    color: #fff;
+    text-decoration: none;
+}  
+
+.liens_footer h3
+{
+    font-family: 'Shrikhand', cursive;
+    font-weight: normal;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+       
+
+
+
+
