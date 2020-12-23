@@ -4,56 +4,6 @@
 /*********FEUILLE DE STYLE - GENERAL*********/
 /********************************************/
 
-
-/************Loading Spinner*************/
-/*Test Loading spinner*/
-
-/*#blocpage :not(.chargement)
-{ 
-    display: none;
-}
-.chargement
-{ 
-    border-right :10px solid #FF79DA;  
-    border-top : 10px solid #FF79DA;
-    border-bottom : 10px solid #9356DC;
-    border-left : 10px solid #9356DC;
-    border-radius: 50%;
-    width:100px;
-    height:100px;
-    -webkit-animation :spin 3s linear infinite;
-    -o-animation: spin 3s linear infinite ;
-    animation: spin 3s linear infinite ;
-
-    margin: auto;
-    position: absolute;
-    top:0;left:0; right:0;bottom:0;
-}
-
-
-@-webkit-keyframes spin {
-    0% {
-        transform : rotate(0deg);
-
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform : rotate(0deg);
-
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
-}*/
-/************Fin Loading Spinner*************/
-
 /****Page****/
 body
 {
@@ -104,6 +54,33 @@ header
     object-fit: cover;
 }
 
+.entete_menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entete_menu i 
+{
+    margin-left: 20px;
+    cursor: pointer;
+} 
+
+.fa-heart:hover
+{ 
+    font-weight: 900;
+    background:  linear-gradient( #FF79DA,#9356DC);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+    transition: all 450ms; 
+    padding-top: 2px;
+    padding-bottom: 2px; 
+}
+
+
 .titre_menu
 {
     font-family: 'Shrikhand', cursive;
@@ -141,7 +118,6 @@ header
     border-bottom: solid #99E2D0; /* This creates the border. Replace black with whatever color you want. */
 }
 
-
 .menu
 {
     background-color: #F2F2F2 ;
@@ -174,9 +150,70 @@ header
 
 .carte:hover
 {
-    background-color: lawngreen;
     cursor: pointer;
+
+   /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
 }
+
+.texte_menu
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.t1, .t2
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    
+.carte:hover::after
+{
+    content:"\f058";
+    font-family: "Font Awesome 5 Free";
+    font-size: x-large;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    background-color: #99E2D0;
+    width: 30%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-right: -20px;
+    margin-left: 10px;
+
+    padding: 35px 10px 10px 10px;
+   
+    animation-duration: 1s;
+    animation-name: slidein; 
+}
+
+
+
+@keyframes slidein {
+    from {
+      width: 0%;
+    }  
+    to {    
+      width: 30%;
+    }
+}
+
+ 
+ 
+  /*@-webkit-keyframes slidein {
+    100% { right: 0; }
+  }
+
+  @keyframes slide {
+    100% { right: 0; }
+  }*/
+
+
 
 /******************************************************************************/
 /*******************Apparition différée des plats (cartes)*********************/
@@ -186,7 +223,7 @@ header
     
     /*opacity: 0;*/
     animation: fadeIn 1s ease-in both;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     /*animation: fadein ease 2s;
     -moz-animation: fadein ease 2s; 
     -webkit-animation: fadein ease 2s; 
@@ -197,7 +234,7 @@ header
 .carte2 {
     /*opacity: 0;*/
     animation: fadeIn 1s ease-in both;
-    animation-delay: 2s;
+    animation-delay: 1s;
     
     /*animation: fadein ease 4s;
     -moz-animation: fadein ease 4s; 
@@ -209,7 +246,7 @@ header
     
     /*opacity: 0;*/
     animation: fadeIn 1s ease-in both;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     /*animation: fadein ease 6s;
     -moz-animation: fadein ease 6s; 
     -webkit-animation: fadein ease 6s; 
@@ -228,6 +265,8 @@ header
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+
 
 /*@-moz-keyframes fadein { 
     from {
@@ -276,6 +315,8 @@ header
     font-weight: bold;
     font-size: large;
 }
+
+
 
 .tarif
 {
