@@ -106,6 +106,8 @@ header
 .type_menu
 {
     text-align: center;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .type_menu::after 
@@ -171,7 +173,7 @@ header
     text-overflow: ellipsis;
 }
     
-.carte:hover::after
+/*.carte:hover::after
 {
     content:"\f058";
     font-family: "Font Awesome 5 Free";
@@ -190,6 +192,49 @@ header
    
     animation-duration: 1s;
     animation-name: slidein; 
+}*/
+
+.selection
+{
+    display: inline-flex;
+    visibility: hidden;
+    /*background-color: red;*/
+    width: auto;
+    height: auto;
+    position: right;
+    margin-right: -20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; 
+  
+}
+.selection i 
+{
+    margin:auto;
+    font-size: x-large;
+    font-weight: 900;
+    color: white;
+    overflow: hidden; 
+}
+
+.carte .selection
+{
+    visibility: visible;
+    animation-name: slideout;
+    animation-duration: 1s;
+    background-color: #99E2D0;
+    width: 0%;
+    margin-left: 0px;
+}
+
+.carte:hover .selection
+{
+    /*transition: all 1s ease-out;*/
+    visibility: visible;
+    background-color: #99E2D0;
+    width: 30%;
+    animation-duration: 1s;
+    animation-name: slidein;
+    margin-left: 10px;
 }
 
 
@@ -203,17 +248,68 @@ header
     }
 }
 
- 
- 
-  /*@-webkit-keyframes slidein {
-    100% { right: 0; }
-  }
+  
+@-webkit-keyframes slidein {
+    from {
+        width: 0%;
+      }  
+      to {    
+        width: 30%;
+      }
+}
 
-  @keyframes slide {
-    100% { right: 0; }
-  }*/
 
+@keyframes slideout {
+    from {
+      width: 30%;
+    }  
+    to {        
+      width: 0%;
+      visibility: hidden;
+    }
+}
 
+  
+@-webkit-keyframes slideout {
+    from {
+        width: 30%;
+      }  
+      to {    
+        width: 0%;
+        visibility: hidden;
+      }
+}
+
+/*@keyframes slideout {
+ 0% {visibility: hidden; }
+}
+  
+@-webkit-keyframes slideout {
+ 0%  { visibility: hidden; }
+}*/
+
+/*.selection:hover::after
+{
+    content:"\f058";
+    font-family: "Font Awesome 5 Free";
+    font-size: x-large;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}*/
+
+.carte:hover i
+{
+    -webkit-animation:spin1 0.5s linear ;
+    -moz-animation:spin1 0.5s linear ;
+    animation:spin1 0.5s linear ;
+}
+
+@-moz-keyframes spin1 { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin1 { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin1 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 /******************************************************************************/
 /*******************Apparition différée des plats (cartes)*********************/
@@ -324,9 +420,8 @@ header
     position: relative;
     margin-top: auto;
     font-weight: bold;
+    margin-right: 10px;
 }
-
-/****Footer****/
 
 /****Footer****/
 
@@ -380,9 +475,91 @@ footer
     font-size: large;
 }
 
+/***************************************************************/
+/**************************MEDIA QUERY**************************/
+/***************************************************************/
 
 
+@media screen and (min-width: 900px) and (max-width: 1220px)
+{
 
+    .menu
+    {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /*.entrees, .plats, .desserts
+    {
+        background-color: lawngreen;
+    }*/
+    .carte
+    {
+        /*background-color: lightcoral;*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*.type_menu
+    {
+        background-color: lawngreen;
+
+    }*/
+
+    .entrees, .plats, .desserts
+    {
+        margin-bottom: 30px;
+        width: min-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+@media screen and (min-width: 320px) and (max-width: 900px)
+{
+    .menu
+    {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /*.entrees, .plats, .desserts
+    {
+        background-color: lawngreen;
+    }*/
+    .carte
+    {
+        /*background-color: lightcoral;*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*.type_menu
+    {
+        background-color: lawngreen;
+
+    }*/
+
+    .entrees, .plats, .desserts
+    {
+        margin-bottom: 30px;
+        width: min-content;
+        margin-left: auto;
+        margin-right: auto;
+
+    }   
+    /****Footer****/
+    .liens_footer
+    {       
+
+    display: block;
+    /*width: 100%;
+    height: inherit;
+    align-items: center;*/
+    }
+}
 
 
 

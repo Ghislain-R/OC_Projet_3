@@ -7,22 +7,36 @@
 
 /************Loading Spinner*************/
 /*Test Loading spinner*/
+body :not(.chargement) {
+    /*opacity: 0;*/
+    animation: opacite 2.5s 1;
+    -webkit-animation :opacite 2.5s 1 ;
+    -o-animation: opacite 2.5s 1;
+    animation-name : opacite ;
 
+    /*-webkit-animation :opacite 5s forwards ;
+    -o-animation: opacite 5s forwards;
+    animation: opacite 5s forwards ;
+    animation-duration: 5s ;
+    animation-name : opacite ;
+    transition:none;
+    
+    animation: logoAp 3s 1;*/
+          
+}
 
 /*.loader
 {
     position: absolute;
-    background: white;
     width: 95%;
     height: 100%;
     margin-top: -30px;
     z-index: 3;
 
-}
+}*/
 
 .chargement
 { 
-    z-index: 4;
     border-right :10px solid #FF79DA;  
     border-top : 10px solid #FF79DA;
     border-bottom : 10px solid #9356DC;
@@ -36,7 +50,6 @@
     animation: spin 3s linear forwards   ;
     animation-duration: 3s;
 
-    
     margin: auto;
     position: absolute;
     top:0;left:0; right:0;bottom:0;
@@ -67,7 +80,36 @@
         transform: rotate(360deg);
         visibility: hidden;
     }
-}*/
+}
+
+@-webkit-keyframes opacite {
+    /*from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }*/
+    0% {opacity:0;}
+    99% {opacity:0;}
+    100% {opacity:1;}
+
+}
+
+@keyframes opacite {
+    /*from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }*/
+    0% {opacity:0;}
+    99% {opacity:0;}
+    100% {opacity:1;}
+}
 
 
 /************Fin Loading Spinner*************/
