@@ -155,8 +155,13 @@ body
 {
     padding-top: 20px;
     padding-bottom: 40px;
-    background-color: rgb(248, 246, 246) ;   
+    background-color: rgb(248, 246, 246) ;  
+}
 
+.bloc1 h1
+{
+
+    font-size: xx-large;
 }
 
 .bloc1 > * /*.h1 .p .a*/
@@ -189,6 +194,7 @@ body
 .bloc2 h1
 {
     text-align: center;
+    font-size: xx-large;
 }
 
 .menu 
@@ -431,15 +437,14 @@ body
 { 
     font-weight: 900;
     background:  linear-gradient( #FF79DA,#9356DC);    
-    background-clip: text;
+    /*background-clip: text;*/
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     transform: scale(1.1);
     transition: all 450ms; 
     padding-top: 2px;
     padding-bottom: 2px; 
 }
-
 
 
 /****Footer****/
@@ -464,6 +469,7 @@ footer
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    padding-top: 10px;
 }
 
 .liens li
@@ -491,8 +497,10 @@ footer
     font-family: 'Shrikhand', cursive;
     font-weight: normal;
     margin-left: 50px;
-    font-size: large;
+    font-size: x-large
 }
+
+
 
 /***************************************************************/
 /**************************MEDIA QUERY**************************/

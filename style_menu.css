@@ -71,9 +71,11 @@ header
 { 
     font-weight: 900;
     background:  linear-gradient( #FF79DA,#9356DC);    
-    background-clip: text;
+    /*background-clip: text;*/
+    color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*color: transparent;*/
+    /*-webkit-text-fill-color: transparent;*/
     transform: scale(1.1);
     transition: all 450ms; 
     padding-top: 2px;
@@ -138,6 +140,12 @@ header
     /*justify-content: stretch;*/
 }
 
+.desc_menu a
+{
+    text-decoration: none;
+    color: black;
+}
+
 .carte
 {
     display: flex;
@@ -198,10 +206,8 @@ header
 {
     display: inline-flex;
     visibility: hidden;
-    /*background-color: red;*/
     width: auto;
     height: auto;
-    position: right;
     margin-right: -20px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; 
@@ -423,6 +429,33 @@ header
     margin-right: 10px;
 }
 
+
+.commande
+{
+    background-color: #F2F2F2 ;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+}
+
+.commander
+{
+    border-style: none;
+    border-radius: 30px;
+    background-color: #FF79DA;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #FF79DA,#9356DC);
+    color: white;
+    font-size: medium;
+    width: 150px;
+    text-align: center;
+}
+
+
+
 /****Footer****/
 
 footer
@@ -445,6 +478,7 @@ footer
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    padding-top: 10px;
 }
 
 .liens li
@@ -472,7 +506,7 @@ footer
     font-family: 'Shrikhand', cursive;
     font-weight: normal;
     margin-left: 50px;
-    font-size: large;
+    font-size: x-large;   
 }
 
 /***************************************************************/
@@ -490,22 +524,11 @@ footer
         padding-bottom: 20px;
     }
 
-    /*.entrees, .plats, .desserts
-    {
-        background-color: lawngreen;
-    }*/
     .carte
     {
-        /*background-color: lightcoral;*/
         margin-left: auto;
         margin-right: auto;
     }
-
-    /*.type_menu
-    {
-        background-color: lawngreen;
-
-    }*/
 
     .entrees, .plats, .desserts
     {
@@ -516,8 +539,27 @@ footer
     }
 
 }
-@media screen and (min-width: 320px) and (max-width: 900px)
+
+@media screen and (min-width: 420px) and (max-width: 900px)
 {
+
+    .logo 
+    {
+        width: 50%;
+        height: auto;
+    }
+
+
+    .entete_menu
+    {
+        background-color: #F2F2F2 ;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        position: relative;
+        top: -30px;
+        margin-bottom: -30px;
+    }
+
     .menu
     {
         display: block;
@@ -525,22 +567,11 @@ footer
         padding-bottom: 20px;
     }
 
-    /*.entrees, .plats, .desserts
-    {
-        background-color: lawngreen;
-    }*/
     .carte
     {
-        /*background-color: lightcoral;*/
         margin-left: auto;
         margin-right: auto;
     }
-
-    /*.type_menu
-    {
-        background-color: lawngreen;
-
-    }*/
 
     .entrees, .plats, .desserts
     {
@@ -549,17 +580,203 @@ footer
         margin-left: auto;
         margin-right: auto;
 
-    }   
-    /****Footer****/
-    .liens_footer
-    {       
+    }  
 
-    display: block;
-    /*width: 100%;
-    height: inherit;
-    align-items: center;*/
+    /****Footer****/
+   .liens_footer, .liens
+    {       
+        display: block;
     }
+
+    .liens
+    {
+        width: auto;
+        padding-top: 0px;
+    }
+
+    footer
+    {
+        background-color: rgb(51, 50, 50);
+        color: white;
+        height: 200px;
+        margin-top: -20px; 
+        padding-bottom: 20px;       
+    }
+
+    .liens li
+    {
+        list-style: none;
+        text-decoration: none;
+        margin-left:-10px;
+        margin-bottom: 10px;   
+    }
+
+    .liens li i
+    {
+        margin-right: 12px;
+    }
+
+
+    .liens li a
+    {
+        color: #fff;
+        text-decoration: none;
+    }  
+
+        .liens_footer h3
+    {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        margin-left: 30px;
+        padding-top: 20px;
+    }
+
 }
+    
+@media only screen and (max-width: 420px)
+{
+    .logo 
+    {
+        width: 50%;
+        height: auto;
+    }    
+
+    .fa-arrow-left
+    {
+        font-size: 1.33em;
+    }
+
+    .entete_menu
+    {
+        background-color: #F2F2F2 ;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        position: relative;
+        top: -30px;
+        margin-bottom: -30px;
+    }
+
+    .type_menu
+    {
+        text-align: left;
+        font-size: medium;
+        font-weight: normal;
+    }
+
+    .type_menu::after 
+    {
+        content: ""; 
+        display: block; 
+        width: 10%; 
+        padding-top: 10px; 
+        border-bottom: solid #99E2D0;
+    }
+
+    .titre_menu
+    {
+        font-family: 'Shrikhand', cursive;
+        font-size: x-large;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .menu
+    {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .carte
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+    }
+    
+    .entrees, .plats, .desserts
+    {
+        margin-bottom: 30px;
+        width: min-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .texte_menu
+    {
+        margin-left: -10px;
+    }
+
+    .t1
+    {
+        font-size: medium;
+    }
+    
+    .t2
+    {
+        font-size: small;
+    }
+
+    .tarif
+    {
+        font-size: small;
+    }
+
+    /****Footer****/
+   .liens_footer, .liens
+   {       
+       display: block;
+   }
+
+   .liens
+   {
+       width: auto;
+       padding-top: 0px;
+   }
+
+   footer
+   {
+       background-color: rgb(51, 50, 50);
+       color: white;
+       height: 200px;
+       margin-top: -20px; 
+       padding-bottom: 20px;       
+   }
+
+   .liens li
+   {
+       list-style: none;
+       text-decoration: none;
+       margin-left:-10px;
+       margin-bottom: 10px;  
+       font-size: medium; 
+   }
+
+   .liens li i
+   {
+       margin-right: 12px;
+   }
+
+
+   .liens li a
+   {
+       color: #fff;
+       text-decoration: none;
+   }  
+
+    .liens_footer h3
+   {
+       font-family: 'Shrikhand', cursive;
+       font-weight: normal;
+       margin-left: 30px;
+       padding-top: 20px;
+       font-size: large;
+   }
+    
+
+}
+
+
 
 
 
