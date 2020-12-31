@@ -452,7 +452,15 @@ header
     font-size: medium;
     width: 150px;
     text-align: center;
+    box-shadow: 0px 0 5px 1px #e0e0e0;
 }
+
+.commander:hover
+{
+    background: linear-gradient(to right, #fd9be1,#9e6dda);
+    box-shadow: 3px 3px 6px #b8b7b7;
+}
+
 
 
 
