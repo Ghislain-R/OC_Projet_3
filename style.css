@@ -378,12 +378,12 @@ body
     object-fit: cover; 
 }
 
-.titi
+.img_new
 {
    position: relative;
 }
 
-.tutu
+.img
 {
     z-index: 1;
 }
@@ -552,7 +552,7 @@ footer
         align-items: center;    
     }
 
-        /****Footer****/
+    /****Footer****/
    .liens_footer, .liens
     {       
         display: block;
@@ -699,7 +699,7 @@ footer
 
 
     /****Footer****/
-   .liens_footer, .liens
+    .liens_footer, .liens
     {       
         display: block;
     }
