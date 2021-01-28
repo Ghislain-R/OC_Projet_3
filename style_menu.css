@@ -1,8 +1,6 @@
-
-
-/********************************************/
-/*********FEUILLE DE STYLE - GENERAL*********/
-/********************************************/
+/***************************************************/
+/*********FEUILLE DE STYLE - PAGES DE MENUS*********/
+/***************************************************/
 
 /****Page****/
 body
@@ -15,16 +13,15 @@ body
 }
 
 /****En-Tête Page***/
-
 header
 {
     display: flex;
     align-items: center;
     
 }
+
 .fa-arrow-left
 {
-    /*background-color: lawngreen;*/
     margin-left: 30px;
     color: black;
     text-decoration: none;
@@ -37,9 +34,9 @@ header
     margin-right: auto ;
     margin-top: 30px;
     margin-bottom: 30px;
-    /*padding-bottom: 20px;*/
 }
 
+/****Section "Illustration"****/
 .illustration
 {
     background-color: lightcoral;
@@ -54,6 +51,7 @@ header
     object-fit: cover;
 }
 
+/****Section "Plats"****/
 .entete_menu
 {
     display: flex;
@@ -71,17 +69,13 @@ header
 { 
     font-weight: 900;
     background:  linear-gradient( #FF79DA,#9356DC);    
-    /*background-clip: text;*/
     color: transparent;
     -webkit-background-clip: text;
-    /*color: transparent;*/
-    /*-webkit-text-fill-color: transparent;*/
-    transform: scale(1.1);
+    transform: scale(1.09);
     transition: all 450ms; 
     padding-top: 2px;
     padding-bottom: 2px; 
 }
-
 
 .titre_menu
 {
@@ -90,20 +84,11 @@ header
     font-weight: normal;
     text-align: center;
 }
+
 .entrees , .plats, .desserts
 {
-    /*display: flex;*/
-    /*background-color: green;*/
-    margin-bottom: 30px;  
-    
+    margin-bottom: 30px;      
 }
-
-/*.type_menu 
-{
-    border-bottom: solid #99E2D0;
-    width: 50%;
-    height: fit-content;
-}*/
 
 .type_menu
 {
@@ -114,12 +99,11 @@ header
 
 .type_menu::after 
 {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    /*margin: 0 auto; /* This will center the border. */
-    width: 100%; /* Change this to whatever width you want. */
-    padding-top: 10px; /* This creates some space between the element and the border. */
-    border-bottom: solid #99E2D0; /* This creates the border. Replace black with whatever color you want. */
+    content: ""; 
+    display: block; 
+    width: 100%; 
+    padding-top: 10px; 
+    border-bottom: solid #99E2D0; 
 }
 
 .menu
@@ -130,14 +114,9 @@ header
     padding-top: 30px;
 }
 
-
 .desc_menu
 {
-    /*margin-left: 30px;*/
     flex-wrap: wrap;
-    /*background-color: red;*/
-    /*border-radius: 15px;*/
-    /*justify-content: stretch;*/
 }
 
 .desc_menu a
@@ -161,10 +140,6 @@ header
 .carte:hover
 {
     cursor: pointer;
-
-   /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;*/
 }
 
 .texte_menu
@@ -181,27 +156,9 @@ header
     text-overflow: ellipsis;
 }
     
-/*.carte:hover::after
-{
-    content:"\f058";
-    font-family: "Font Awesome 5 Free";
-    font-size: x-large;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-    background-color: #99E2D0;
-    width: 30%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    margin-right: -20px;
-    margin-left: 10px;
-
-    padding: 35px 10px 10px 10px;
-   
-    animation-duration: 1s;
-    animation-name: slidein; 
-}*/
-
+/******************************************************************************/
+/***********************Animation au survol d'un plat**************************/
+/******************************************************************************/
 .selection
 {
     display: inline-flex;
@@ -213,6 +170,7 @@ header
     border-bottom-right-radius: 15px; 
   
 }
+
 .selection i 
 {
     margin:auto;
@@ -234,7 +192,6 @@ header
 
 .carte:hover .selection
 {
-    /*transition: all 1s ease-out;*/
     visibility: visible;
     background-color: #99E2D0;
     width: 30%;
@@ -242,8 +199,6 @@ header
     animation-name: slidein;
     margin-left: 10px;
 }
-
-
 
 @keyframes slidein {
     from {
@@ -254,7 +209,6 @@ header
     }
 }
 
-  
 @-webkit-keyframes slidein {
     from {
         width: 0%;
@@ -263,7 +217,6 @@ header
         width: 30%;
       }
 }
-
 
 @keyframes slideout {
     from {
@@ -275,7 +228,6 @@ header
     }
 }
 
-  
 @-webkit-keyframes slideout {
     from {
         width: 30%;
@@ -285,26 +237,6 @@ header
         visibility: hidden;
       }
 }
-
-/*@keyframes slideout {
- 0% {visibility: hidden; }
-}
-  
-@-webkit-keyframes slideout {
- 0%  { visibility: hidden; }
-}*/
-
-/*.selection:hover::after
-{
-    content:"\f058";
-    font-family: "Font Awesome 5 Free";
-    font-size: x-large;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}*/
 
 .carte:hover i
 {
@@ -318,43 +250,38 @@ header
 @keyframes spin1 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 /******************************************************************************/
+/***********************Fin Animation au survol d'un plat**********************/
+/******************************************************************************/
+
+/******************************************************************************/
 /*******************Apparition différée des plats (cartes)*********************/
 /******************************************************************************/
 
 .carte1 {
     
-    /*opacity: 0;*/
     animation: fadeIn 1s ease-in both;
     animation-delay: 0.5s;
-    /*animation: fadein ease 2s;
-    -moz-animation: fadein ease 2s; 
-    -webkit-animation: fadein ease 2s; 
-    -o-animation: fadein ease 2s;*/
 
 }
 
 .carte2 {
-    /*opacity: 0;*/
+
     animation: fadeIn 1s ease-in both;
     animation-delay: 1s;
-    
-    /*animation: fadein ease 4s;
-    -moz-animation: fadein ease 4s; 
-    -webkit-animation: fadein ease 4s;
-    -o-animation: fadein ease 4s;*/
 }
 
 .carte3 {
     
-    /*opacity: 0;*/
     animation: fadeIn 1s ease-in both;
     animation-delay: 1.5s;
-    /*animation: fadein ease 6s;
-    -moz-animation: fadein ease 6s; 
-    -webkit-animation: fadein ease 6s; 
-    -o-animation: fadein ease 6s;*/
+
 }
 
+.carte4 {
+    
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 2s;
+}
 
 
 @keyframes fadeIn {
@@ -368,47 +295,12 @@ header
 	}
 }
 
-
-
-/*@-moz-keyframes fadein { 
-    from {
-        opacity:0;
-        transform: translate3d(0, 10%, 0);
-    }
-    to {
-        opacity:1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-@-webkit-keyframes fadein { 
-    from {
-        opacity:0;
-        transform: translate3d(0, 10%, 0);
-    }
-    to {
-        opacity:1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@-o-keyframes fadein { 
-    from {
-        opacity:0;
-        transform: translate3d(0, 10%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}*/
-
 /*********************************************************************/
 /***************Fin Apparition différée des plats*********************/
 /*********************************************************************/
 
 .texte_menu
 {
-    /*background-color: mediumblue;*/
     width: 100%;
 }
 
@@ -418,17 +310,13 @@ header
     font-size: large;
 }
 
-
-
 .tarif
 {
-    /*background-color: lightpink;*/
     position: relative;
     margin-top: auto;
     font-weight: bold;
     margin-right: 10px;
 }
-
 
 .commande
 {
@@ -462,10 +350,7 @@ header
 }
 
 
-
-
 /****Footer****/
-
 footer
 {
     background-color: rgb(51, 50, 50);
@@ -502,7 +387,6 @@ footer
     margin-right: 12px;
 }
 
-
 .liens li a
 {
     color: #fff;
@@ -518,13 +402,12 @@ footer
 }
 
 /***************************************************************/
-/**************************MEDIA QUERY**************************/
+/**************************MEDIA QUERIES************************/
 /***************************************************************/
-
 
 @media screen and (min-width: 900px) and (max-width: 1220px)
 {
-
+    /****Section "Plats"****/
     .menu
     {
         display: block;
@@ -545,19 +428,18 @@ footer
         margin-left: auto;
         margin-right: auto;
     }
-
 }
 
 @media screen and (min-width: 420px) and (max-width: 900px)
 {
-
+    /****En-Tête Page***/
     .logo 
     {
         width: 50%;
         height: auto;
     }
 
-
+    /****Section "Plats"****/
     .entete_menu
     {
         background-color: #F2F2F2 ;
@@ -587,11 +469,10 @@ footer
         width: min-content;
         margin-left: auto;
         margin-right: auto;
-
     }  
 
     /****Footer****/
-   .liens_footer, .liens
+    .liens_footer, .liens
     {       
         display: block;
     }
@@ -624,14 +505,13 @@ footer
         margin-right: 12px;
     }
 
-
     .liens li a
     {
         color: #fff;
         text-decoration: none;
     }  
 
-        .liens_footer h3
+    .liens_footer h3
     {
         font-family: 'Shrikhand', cursive;
         font-weight: normal;
@@ -643,6 +523,7 @@ footer
     
 @media only screen and (max-width: 420px)
 {
+    /****En-Tête Page***/
     .logo 
     {
         width: 50%;
@@ -654,6 +535,7 @@ footer
         font-size: x-large;
     }
 
+    /****Section "Plats"****/
     .entete_menu
     {
         background-color: #F2F2F2 ;
@@ -731,56 +613,54 @@ footer
     }
 
     /****Footer****/
-   .liens_footer, .liens
-   {       
-       display: block;
-   }
+    .liens_footer, .liens
+    {       
+        display: block;
+    }
 
-   .liens
-   {
-       width: auto;
-       padding-top: 0px;
-   }
+    .liens
+    {
+        width: auto;
+        padding-top: 0px;
+    }
 
-   footer
-   {
-       background-color: rgb(51, 50, 50);
-       color: white;
-       height: 200px;
-       margin-top: -20px; 
-       padding-bottom: 20px;       
-   }
+    footer
+    {
+        background-color: rgb(51, 50, 50);
+        color: white;
+        height: 200px;
+        margin-top: -20px; 
+        padding-bottom: 20px;       
+    }
 
-   .liens li
-   {
-       list-style: none;
-       text-decoration: none;
-       margin-left:-10px;
-       margin-bottom: 10px;  
-       font-size: medium; 
-   }
+    .liens li
+    {
+        list-style: none;
+        text-decoration: none;
+        margin-left:-10px;
+        margin-bottom: 10px;  
+        font-size: medium; 
+    }
 
-   .liens li i
-   {
-       margin-right: 12px;
-   }
+    .liens li i
+    {
+        margin-right: 12px;
+    }
 
-
-   .liens li a
-   {
-       color: #fff;
-       text-decoration: none;
-   }  
+    .liens li a
+    {
+        color: #fff;
+        text-decoration: none;
+    }  
 
     .liens_footer h3
-   {
+    {
        font-family: 'Shrikhand', cursive;
        font-weight: normal;
        margin-left: 30px;
        padding-top: 20px;
        font-size: large;
-   }
-    
+    }   
 
 }
 
