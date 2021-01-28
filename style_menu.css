@@ -68,7 +68,7 @@ header
 .fa-heart:hover
 { 
     font-weight: 900;
-    background:  linear-gradient( #FF79DA,#9356DC);    
+    background: linear-gradient(45deg, #FF79DA, #9356DC);    
     color: transparent;
     -webkit-background-clip: text;
     transform: scale(1.09);
@@ -335,7 +335,7 @@ header
     text-decoration: none;
     padding: 15px;
     margin: 0 auto;
-    background: linear-gradient(to right, #FF79DA,#9356DC);
+    background: linear-gradient(180deg, #FF79DA, #9356DC);
     color: white;
     font-size: medium;
     width: 150px;
@@ -345,7 +345,7 @@ header
 
 .commander:hover
 {
-    background: linear-gradient(to right, #fd9be1,#9e6dda);
+    background: linear-gradient(180deg, #fd9be1, #9e6dda);
     box-shadow: 3px 3px 6px #b8b7b7;
 }
 
